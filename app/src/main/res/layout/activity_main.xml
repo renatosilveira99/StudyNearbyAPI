@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.intercon.studynearbyapi.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ctnMyCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtLinkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Linkedin"
+                android:text="ricardoogliari"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Facebook"
+                android:text="ricardo.ogliari.3"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtTwitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Twitter"
+                android:text="mobilidadetudo"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://eventos.locaweb.com.br/files/2017/09/ricardo-ogliari.jpg"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:onClick="share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compartilhar cartão"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/ctnReceivedCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgPhoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <TextView
+            android:onClick="facebook"
+            android:padding="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawableRight="@drawable/ic_chevron_right_circle_outline"
+            android:id="@+id/txtFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:onClick="twitter"
+            android:padding="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawableRight="@drawable/ic_chevron_right_circle_outline"
+            android:id="@+id/txtTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:onClick="linkedin"
+            android:padding="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawableRight="@drawable/ic_chevron_right_circle_outline"
+            android:id="@+id/txtLinkedin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:onClick="ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ok"/>
+    </LinearLayout>
+
+
+</LinearLayout>
